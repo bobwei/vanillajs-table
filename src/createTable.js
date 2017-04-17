@@ -23,7 +23,7 @@ const createTable = ({ data }) => {
           {},
           columns.map(column => (
             createElement(
-              'th',
+              'td',
               {},
               row[column],
             )
