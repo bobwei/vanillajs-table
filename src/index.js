@@ -1,12 +1,10 @@
 import './index.scss';
-
-const render = (el, mountNode) => {
-  mountNode.parentNode.replaceChild(el, mountNode);
-};
+import createTable from './createTable';
+import data from './data';
+import render from './render';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const testEl = document.createElement('div');
-  testEl.textContent = 'Hello World';
+  const table = createTable({ data });
   const mountNode = document.getElementById('app');
-  render(testEl, mountNode);
+  render(table, mountNode);
 });
